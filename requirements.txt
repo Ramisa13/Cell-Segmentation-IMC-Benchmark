@@ -1,0 +1,36 @@
+# =============================================================================
+# Cell Segmentation IMC Benchmark — Python Dependencies
+# Tested on Python 3.12, CSC Puhti (NVIDIA V100 GPU)
+# =============================================================================
+
+# ---- Core scientific computing ----
+numpy>=1.26,<2.0
+scipy>=1.13
+pandas>=2.1
+scikit-image==0.21.*
+matplotlib>=3.8
+seaborn>=0.13
+
+# ---- Deep learning — PyTorch (for Cellpose) ----
+# Install PyTorch separately with the correct CUDA version for your hardware:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# Then install Cellpose:
+cellpose==4.0.1
+
+# ---- Deep learning — TensorFlow (for StarDist) ----
+# IMPORTANT: set KERAS_BACKEND=tensorflow before importing StarDist
+tensorflow==2.17.*
+keras>=3.0
+stardist==0.8.*
+
+# ---- Utilities ----
+tqdm>=4.66
+Pillow>=10.0
+h5py>=3.10
+zarr>=2.17
+anndata>=0.10
+scikit-learn>=1.4
+
+# ---- Jupyter (optional, for notebook usage) ----
+jupyter>=1.0
+ipykernel>=6.29
